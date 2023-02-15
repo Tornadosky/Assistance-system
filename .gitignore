@@ -3,5 +3,7 @@
 /Include
 /Lib
 /Scripts
-/share/*
+/share
 /pyvenv.cfg
+/.rasa
+/models

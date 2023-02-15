@@ -6,16 +6,24 @@ nlu:
     - hey
     - hello
     - hi
+    - howdy
+    - hey
+    - sup 
+    - how goes it
+    - whats up?
     - hello there
     - good morning
     - good evening
     - moin
+    - yo
     - hey there
     - let's go
     - hey dude
     - goodmorning
     - goodevening
     - good afternoon
+    - ola
+    - hola
 
 - intent: goodbye
   examples: |
@@ -29,59 +37,44 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - see ya
 
-- intent: affirm
+- intent: thanks
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Thank you for your help
+    - thanks for the information
+    - Many thanks for your time
+    - I really appreciate it, thank you
+    - Thanks a lot
+    - thanks
+    - appreciated
+    - many thanks!
+    - thank you so much
 
-- intent: deny
+- intent: help
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Can you help me?
+    - Could you please show me what you can
+    - How can you help me
+    - I need help
+    - I need some help
+    - What do you do
+    - can you help me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - how can i use you
+    - how can you help me
+    - how does this work?
+    - show me what's possible
+    - so what can you do?
+    - what can I ask?
+    - what can I ask you?
+    - what can i do here
+    - what can u do
+    - what can you do?
 
 - intent: bot_challenge
   examples: |
@@ -89,3 +82,4 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+

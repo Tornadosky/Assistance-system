@@ -8,26 +8,83 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - mensa_info_hours
+  - mensa_info_location
+  - mensa_info_contact
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "Hello! How can I help you?"
+  - text: "Hi there! How can I assist you?"
+  - text: "Welcome to Mensa Companion! How can I help you?"
+  - text: "Hi! How can I help you today?"
+  - text: "Hello and thanks for using Mensa Companion! How can I assist you?"
+  - text: "Hi there! What do you need help with?"
+  - text: "Hello and welcome! How can I assist you?"
+  - text: "Hi! What do you need assistance with today?"
+  - text: "Hey there! How can I help you?"
+  - text: "Hello and thanks for using our service! How may I assist you?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Thanks for using Mensa Companion! Have a great day."
+  - text: "Nice chatting with you. Have a great day!"
+  - text: "Thanks for stopping by! Bye for now."
+  - text: "Goodbye! Have a great day."
+  - text: "It was great helping you. Have a wonderful day."
+  - text: "Farewell! Have a great day ahead."
+  - text: "Goodbye for now! Have a great rest of your day."
+  - text: "Thanks for using Mensa Companion. Have a great day."
+  - text: "It was nice assisting you. Farewell for now."
+  - text: "Thanks for using our service. Have a great day."
+  - text: "Goodbye and have a great day."
+  - text: "It was great helping you out. Goodbye for now."
+  - text: "Thanks for using Mensa Companion. Have a fantastic day."
+  - text: "Farewell and have a great day."
+  - text: "Thanks for using our service. Goodbye for now and have a great day ahead."
+
+  utter_urwelcome:
+  - text: "Happy to help! Is there anything else I can assist you with?"
+  - text: "No problem. Is there anything else I can do for you?"
+  - text: "You are welcome. Is there anything else I can do for you?"
+  - text: "My pleasure! Do you need assistance with anything else?"
+  - text: "Glad I could assist! What else can I do for you?"
+  - text: "Anytime! Is there anything else on your mind that I can help with?"
+  - text: "It was nothing, happy to help out. Let me know if you need any more help."
+  - text: "No worries, happy to assist."
+  - text: "Happy to help!"
+  - text: "Of course, happy to be of service. Let me know if you need any additional support."
+  - text: "You're welcome, let me know if you need further assistance."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  - text: "I am Mensa Companion, a chatbot."
+  - text: "I am an AI chatbot."
+  - text: "I am a virtual assistant."
+  - text: "I am a computer program."
+  - text: "I am a digital assistant."
+  - text: "I am a chatbot powered by RASA."
+  - text: "I am a bot, not a human."
+  - text: "I am an AI, not a person."
+  - text: "I am a computer program, not a human."
+  - text: "I am a chatbot powered by RASA, not a human."
+
+  utter_help:
+  - text: "
+    Here is a list of things I can do:\n
+    1. Provide information about the mensa's menu, including prices and details about specific dishes.\n
+    2. Assist in meal planning and budgeting.\n
+    3. Help users find dishes that meet their specific dietary needs or preferences.\n
+    4. Provide information about the canteen's hours, location, and contact details."
+  - text: "I can help you use our system more effectively. 
+  Some examples of commands are: 'Show me the menu for today,' 'What are the dish prices for today?', 
+  'I'm looking for vegetarian options.'"
+  - text: "Mensa Companion can be used through commands, such as 
+  asking about the menu, prices, or dietary options. Some common commands include 'What's on the menu today?',
+  'How much does a meal cost?', 'Do you have any gluten-free options?"
+  - text: "I'd be happy to help. You can ask such questions: 'Which dishes are gluten-free?', 
+  'Where is the canteen located?', 'How much does the dish cost?' and many other."
+
 
 session_config:
   session_expiration_time: 60
