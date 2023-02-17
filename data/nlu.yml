@@ -1,6 +1,48 @@
 version: "3.1"
 
 nlu:
+
+- synonym: cheap
+  examples: |
+    - low-priced
+    - minimum price
+    - cheapest
+    - lowest price
+    - min price
+    - minimal price
+    - low-cost price
+
+- synonym: expensive
+  examples: |
+    - high-priced
+    - maximum price
+    - most expensive 
+    - max price
+    - maximal price
+    - high-cost price
+    - highest price
+
+- synonym: students
+  examples: |
+    - student
+    - Student
+    - Students
+    - students
+  
+- synonym: employees
+  examples: |
+    - employee
+    - Employee
+    - employees
+    - Employees
+
+- synonym: others
+  examples: |
+    - other
+    - Other
+    - others
+    - Others
+
 - intent: greet
   examples: |
     - hey

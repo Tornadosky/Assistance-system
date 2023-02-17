@@ -2,29 +2,28 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: Mensa info time
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: mensa_info_hours
+  - action: utter_mensa_info_hours
+  - intent: thanks
   - action: utter_goodbye
+
+- story: Mensa info location
+  steps:
+  - intent: mensa_info_location
+  - action: utter_mensa_info_location
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: Get menu for the day
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: menu_info_time
+  - action: action_get_menu_time
+  - intent: help
+  - action: utter_help
+
