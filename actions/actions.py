@@ -91,33 +91,12 @@ class ActionGetPrice(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # MyMemory - Translation Memory, RapidAPI
-        #url = "https://translated-mymemory---translation-memory.p.rapidapi.com/get"
-
-        #querystring = {"langpair":"en|de","q":"Hello World!","mt":"1","onlyprivate":"0","de":"a@b.c"}
-
-        # headers = {
-        #     "X-RapidAPI-Key": "32f56d0431msh848500091a736a9p1520f8jsn87c9fe7a3774",
-        #     "X-RapidAPI-Host": "translated-mymemory---translation-memory.p.rapidapi.com"
-        # }
-
-        # get response from translation API
-        #response = requests.request("GET", url, headers=headers, params=querystring)
-        #print(response.text)
-
-        print("dish = ", next(tracker.get_latest_entity_values("dish"), None))
-        print("tracker = ", next(tracker.get_latest_entity_values("time"), None))
-        print("all info - ", tracker.latest_message)
-
         # get entity for specific dish
-        # dish_ent = next(tracker.get_latest_entity_values("dish"), None)
         dish = tracker.get_slot("dish")
-
         person_type = tracker.get_slot("person_type")
         
         # get value from time slot
         my_time = tracker.get_slot("time")
-        print(my_time)
 
         # default route - today
         if my_time is None:
@@ -142,5 +121,49 @@ class ActionGetPrice(Action):
                     return []
 
         response = f"Sorry, I couldn't find this dish in the menu for {date}."
+        dispatcher.utter_message(response)
+        return []
+
+class ActionGetNotes(Action):
+
+    def name(self) -> Text:
+        return "action_get_notes"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # get entity for specific dish
+        dish = tracker.get_slot("dish")
+        my_time = tracker.get_slot("time")
+
+        if dish is None:
+            response = "Sorry, I couldn't understand what dish you want."
+            dispatcher.utter_message(response)
+            return []
+
+        # default route - today
+        if my_time is None:
+            date = datetime.date.today()
+        else:
+            date = my_time[0:10]
+
+        x = requests.get(f'https://openmensa.org/api/v2/canteens/198/days/{date}/meals')
+
+        if (x.status_code == 404):
+            response = "Sorry, we ran into problem with OpenMensa."
+            dispatcher.utter_message(response)
+            return []
+        
+        y = x.json()
+        # check in results if user's dish is at least partially in API results
+        for obj in y:
+            for part in dish.lower().split():
+                if part in obj['name'].lower().split():
+                    response = f"Notes for { obj['name'] } are { obj['notes'] }"
+                    dispatcher.utter_message(response)
+                    return []
+
+        response = "Sorry, I couldn't find this dish in the menu."
         dispatcher.utter_message(response)
         return []
