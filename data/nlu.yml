@@ -49,11 +49,21 @@ nlu:
     - hello
     - hi
     - howdy
+    - hey
+    - sup 
     - how goes it
     - whats up?
+    - hello there
+    - good morning
     - good evening
     - moin
     - yo
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
     - ola
     - hola
 
@@ -62,6 +72,11 @@ nlu:
     - cu
     - good by
     - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
     - bye bye
     - see you later
     - see ya
@@ -70,8 +85,161 @@ nlu:
   examples: |
     - Thank you for your help
     - thanks for the information
+    - Many thanks for your time
+    - I really appreciate it, thank you
+    - Thanks a lot
+    - thanks
     - appreciated
     - many thanks!
     - thank you so much
 
+- intent: help
+  examples: |
+    - Can you help me?
+    - Could you please show me what you can
+    - How can you help me
+    - I need help
+    - I need some help
+    - What do you do
+    - can you help me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - how can i use you
+    - how can you help me
+    - how does this work?
+    - show me what's possible
+    - so what can you do?
+    - what can I ask?
+    - what can I ask you?
+    - what can i do here
+    - what can u do
+    - what can you do?
 
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: mensa_info_hours
+  examples: |
+    - What are the canteen's hours of operation?
+    - When is the canteen open?
+    - What are the canteen's closing times?
+    - Do the hours vary depending on the day of the week?
+    - Is the canteen open on weekends?
+    - Is the canteen open late?
+    - What are the canteen's holiday hours?
+
+- intent: mensa_info_location
+  examples: |
+    - Where is the canteen located?
+    - Can you give me directions to the canteen?
+    - Where can i find mensa?
+    - Do you have the canteen's address?
+    - Do you have any information about public transportation options to get to the canteen?
+
+- intent: mensa_info_contact
+  examples: |
+    - What's the canteen's phone number?
+    - How can I contact the canteen if I have a question or problem?
+    - Can you give me the canteen's email address?
+    - What's the canteen's fax number?
+    - Do you have the mensa's website?
+    - What's the canteen's social media presence?
+
+- intent: mensa_info
+  examples: |
+    - Tell me about Mensa
+    - Mensa info
+    - I need information about Mensa
+    - What is the general information of the canteen
+
+- intent: i_am_person_type
+  examples: |
+    - I am a [student](person_type).
+    - I am a Master's [student](person_type).
+    - I'm currently a college [student](person_type).
+    - I am an [employee](person_type)(person_type).
+    - I am a part-time [employee](person_type).
+    - I am an [other](person_type).
+    - [Student](person_type).
+    - [Employee](person_type).
+    - [Other](person_type).
+    
+- intent: menu_info_time
+  examples: |
+    - What's on the menu today?
+    - What do we have tomorrow?
+    - what we have in menu tomorrow
+    - menu for 25 January
+    - give me the menu for 25/01/2023
+    - Give me the menu for the day before yesterday.
+    - what can i eat on 15.02?
+    - What are the specials today?
+    - I would like to get menu for yesterday
+    - What was in the menu for last Monday?
+
+- intent: price_info
+  examples: |
+    - What's the price of the [chicken](dish) dish?
+    - How much does the [pasta](dish) cost?
+    - What is price for [joghurt](dish) for the day before yesterday
+    - How much do the [kartoffel mit apfel](dish) cost?
+    - Give me the price for [Kokos-Schokopudding](dish)?
+    - Can you give me the price of [Gemischter Salat](dish).
+    - Hom much euros does [nudeln](dish) cost?
+
+- intent: get_notes
+  examples: |
+    - What are the ingredients of the [Kartoffel](dish) dish?
+    - What ingredients does the [pasta](dish) have?
+    - What are the notes for [joghurt](dish) for the day before yesterday
+    - What notes does [kartoffel mit apfel](dish) have?
+    - Give me the list of ingredients for [Kokos-Schokopudding](dish)?
+    - Can you give me the notes of [Gemischter Salat](dish).
+
+- intent: specific_food_search
+  examples: |
+    - Do you have any [vegetarian](ingredient) options?
+    - Do you have any [vegan](ingredient) options?
+    - What are the [vegan](ingredient) dishes on the menu?
+    - Do you have any [gluten-free](ingredient) options?
+    - Do any of the dishes contain [nuts](ingredient)?
+    - Do you have any dishes that contain [dairy](ingredient)?
+    - Do any of the dishes contain [soy](ingredient)?
+    - Do you have any [paleo](ingredient) options?
+    - Do any of the dishes contain [egg](ingredient)?
+    - Do you have any dishes with [wheat](ingredient) in ingredients?
+
+- intent: price_cheap_or_expensive
+  examples: |
+    - What is the [cheapest](detail) dish for today in the menu?
+    - Give me the [cheapest](detail) dish in the menu
+    - I would like to know what dish is the [cheapest](detail) tomorrow?
+    - What's the most [low-priced](detail) dished for the next week?
+    - What is the [cheapest](detail) meal for tomorrow
+    - Give me [minimum](detail) price for today for main dishes
+    - I want to know the [lowest](detail) price for main dishes today
+    - I want to know what was the [minimal](detail) priced dish for yesterday?
+    - Give me the most [expensive](detail) dish and it's price.
+    - Provide me with the most [high-priced](detail) dish in the menu?
+    - What is the most [expensive](detail) dish for today?
+    - What is the [maximum](detail) price for tomorrow?
+    - [Max](detail) price for tomorrow?
+    - Is it the most [expensive](detail) dish?
+    - I need to know what dish is the most [expensive](detail) today
+    - Inform then please about the most [expensive](detail) dish for the next week 
+    - What is the [highest](detail) price for main dish tomorrow
+
+- intent: budget_search
+  examples: |
+    - I want to have a week meal plan under 30 euros.
+    - Provide me with the menu so that i fit within a 42 Euro budget for next week.
+    - Could you please give me a meal plan for 34 Euro for this week?
+    - I want a budget plan next week for 22euro!
+    - Come up with a budget for 25 euro.
