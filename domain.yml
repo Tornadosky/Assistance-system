@@ -3,14 +3,20 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
+  - thanks
+  - help
   - bot_challenge
   - mensa_info_hours
   - mensa_info_location
   - mensa_info_contact
+  - mensa_info
+  - i_am_person_type
+  - menu_info_time
+  - price_info
+  - get_notes
+  - specific_food_search
+  - price_cheap_or_expensive
+  - budget_search
 
 
 responses:

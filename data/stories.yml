@@ -2,22 +2,6 @@ version: "3.1"
 
 stories:
 
-- story: Mensa info time
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mensa_info_hours
-  - action: utter_mensa_info_hours
-  - intent: thanks
-  - action: utter_goodbye
-
-- story: Mensa info location
-  steps:
-  - intent: mensa_info_location
-  - action: utter_mensa_info_location
-  - intent: thanks
-  - action: utter_goodbye
-
 - story: Get menu for the day
   steps:
   - intent: greet
@@ -26,4 +10,43 @@ stories:
   - action: action_get_menu_time
   - intent: help
   - action: utter_help
+
+- story: Get menu
+  steps:
+  - intent: menu_info_time
+  - action: action_get_menu_time
+  - intent: help
+  - action: utter_help
+
+- story: Max || Min price for specific time
+  steps:
+  - slot_was_set:
+    - person_type: false
+  - intent: price_cheap_or_expensive
+  - action: utter_ask_person_type
+  - intent: i_am_person_type
+  - action: action_get_minmax_price
+
+- story: Max || Min price for specific time, slot is set
+  steps:
+  - slot_was_set:
+    - person_type: true
+  - intent: price_cheap_or_expensive
+  - action: action_get_minmax_price
+
+- story: Price of specific dish
+  steps:
+  - intent: price_info
+  - slot_was_set:
+    - person_type: false
+  - action: utter_ask_person_type
+  - intent: i_am_person_type
+  - action: action_get_price
+
+- story: Price of specific dish, slot is set
+  steps:
+  - slot_was_set:
+    - person_type: true
+  - intent: price_info
+  - action: action_get_price
 
