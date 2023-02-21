@@ -150,6 +150,14 @@ responses:
   - text: "Are you a full-time student, an employee, or other?"
   - text: "Which of the following best describes you: Student, Employee, or Other?"
 
+actions:
+  - action_get_price
+  - action_get_menu_time
+  - action_get_minmax_price
+  - action_budget_search
+  - action_get_notes
+  - action_specific_food
+  - action_decide_utter
 
 session_config:
   session_expiration_time: 60
