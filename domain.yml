@@ -18,6 +18,35 @@ intents:
   - price_cheap_or_expensive
   - budget_search
 
+entities:
+  - dish
+  - time
+  - person_type
+  - detail
+  - ingredient
+
+slots:
+  time:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: time
+  person_type:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: person_type
+  detail:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: detail
+  dish:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: dish
+
 
 responses:
   utter_greet:
@@ -90,6 +119,36 @@ responses:
   'How much does a meal cost?', 'Do you have any gluten-free options?"
   - text: "I'd be happy to help. You can ask such questions: 'Which dishes are gluten-free?', 
   'Where is the canteen located?', 'How much does the dish cost?' and many other."
+
+  utter_mensa_info_hours:
+  - text: "Mensa is open on Mondays till Fridays from 11 am till 14:15"
+  - text: "Deggendorf's Mensa works from 11am to 14.15"
+  - text: "Operation hours are: 11.00 - 14.15"
+
+  utter_mensa_info_location:
+  - text: "Mensa is located at Edlmaierstraße 2, 94469 Deggendorf, Germany"
+  - text: "Mensa is at Edlmaierstraße 2, 94469 Deggendorf, Germany"
+  - text: "Currently it is situated in Hall 2 of the Deggendorf Stadthallen"
+
+  utter_mensa_info_contact:
+  - text: "Our telephone number is +49 991 3615 601 and our Email is koch.e@stwno.de"
+  - text: "Mensa Email: koch.e@stwno.de, Mensa phone number: +49 991 3615 601"
+  - text: "Office in Deggendorf: F101; Tel: +49 991 3615 601; Email: koch.e@stwno.de"
+
+  utter_mensa_info:
+  - text: "Mensa is open on Mondays till Fridays from 11 pm till 14:15. 
+  It's located at Edlmairstraße 6-8, 94469 Deggendorf, Germany"
+
+  utter_ask_person_type:
+  - text: "Who are you? Student, Employee or other?"
+  - text: "What category do you fall under: Student, Employee, or Other?"
+  - text: "Can you tell me if you are currently a Student, Employee, or Other?"
+  - text: "Are you classifying yourself as a Student, Employee, or Other?"
+  - text: "Which group do you belong to: Student, Employee, or Other?"
+  - text: "Do you consider yourself a Student, Employee, or Other?"
+  - text: "Can you specify if you are a Student, Employee, or Other?"
+  - text: "Are you a full-time student, an employee, or other?"
+  - text: "Which of the following best describes you: Student, Employee, or Other?"
 
 
 session_config:

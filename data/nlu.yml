@@ -49,8 +49,6 @@ nlu:
     - hello
     - hi
     - howdy
-    - hey
-    - sup 
     - how goes it
     - whats up?
     - hello there
@@ -59,9 +57,6 @@ nlu:
     - moin
     - yo
     - hey there
-    - let's go
-    - hey dude
-    - goodmorning
     - goodevening
     - good afternoon
     - ola
@@ -72,9 +67,6 @@ nlu:
     - cu
     - good by
     - cee you later
-    - good night
-    - bye
-    - goodbye
     - have a nice day
     - see you around
     - bye bye
