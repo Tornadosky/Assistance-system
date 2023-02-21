@@ -2,6 +2,22 @@ version: "3.1"
 
 stories:
 
+- story: Mensa info time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mensa_info_hours
+  - action: utter_mensa_info_hours
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: Mensa info location
+  steps:
+  - intent: mensa_info_location
+  - action: utter_mensa_info_location
+  - intent: thanks
+  - action: utter_goodbye
+
 - story: Get menu for the day
   steps:
   - intent: greet
@@ -49,4 +65,41 @@ stories:
     - person_type: true
   - intent: price_info
   - action: action_get_price
+
+- story: Contact details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mensa_info_contact
+  - action: utter_mensa_info_contact
+
+- story: All Mensa info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mensa_info
+  - action: utter_mensa_info
+
+- story: Fit within a budget
+  steps:
+  - intent: budget_search
+  - slot_was_set:
+    - person_type: false
+  - action: utter_ask_person_type
+  - intent: i_am_person_type
+  - action: action_budget_search
+
+- story: Get ingredients of a dish
+  steps:
+  - intent: get_notes
+  - action: action_get_notes
+  - intent: thanks
+  - action: utter_urwelcome
+
+- story: Get dishes with specific ingredient
+  steps:
+  - intent: specific_food_search
+  - action: action_specific_food
+  - intent: thanks
+  - action: utter_urwelcome
 

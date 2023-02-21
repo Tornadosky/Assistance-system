@@ -9,7 +9,7 @@ language: en
 pipeline:
 - name: "DucklingEntityExtractor"
   # url of the running duckling server
-  url: "http://192.168.99.102:8000"
+  url: "http://localhost:8000"
   # dimensions to extract
   dimensions: ["time"]
   # allows you to configure the locale, by default the language is

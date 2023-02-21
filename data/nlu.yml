@@ -51,14 +51,9 @@ nlu:
     - howdy
     - how goes it
     - whats up?
-    - hello there
-    - good morning
     - good evening
     - moin
     - yo
-    - hey there
-    - goodevening
-    - good afternoon
     - ola
     - hola
 
@@ -67,8 +62,6 @@ nlu:
     - cu
     - good by
     - cee you later
-    - have a nice day
-    - see you around
     - bye bye
     - see you later
     - see ya
@@ -77,10 +70,6 @@ nlu:
   examples: |
     - Thank you for your help
     - thanks for the information
-    - Many thanks for your time
-    - I really appreciate it, thank you
-    - Thanks a lot
-    - thanks
     - appreciated
     - many thanks!
     - thank you so much
