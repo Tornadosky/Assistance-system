@@ -11,3 +11,14 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Activate person_type form
+  steps:
+  - or:
+    - intent: price_info
+    - intent: price_cheap_or_expensive
+    - intent: budget_search
+  - slot_was_set:
+    - person_type: false
+  - active_loop: person_type_form
+
